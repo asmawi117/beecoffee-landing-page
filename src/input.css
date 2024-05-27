@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply tracking-wider font-poetsen;
+  }
+
+  section {
+    @apply pt-16 pb-4 md:pt-20;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-block text-sm font-semibold py-3 px-8 capitalize text-center cursor-pointer rounded-md ease-linear duration-200;
+  }
+
+  .btn-primary {
+    @apply text-dark bg-primary hover:opacity-70;
+  }
+}
+
+@layer utilities {
+  .hero-title,
+  .card-title {
+    @apply text-4xl font-poetsen font-bold uppercase lg:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-slate-800 to-amber-700;
+  }
+
+  .card-title {
+    @apply text-xl;
+  }
+
+  .hr-line {
+    @apply w-28 h-[2px] bg-primary my-5;
+  }
+
+  .paragraph {
+    @apply text-slate-500 text-sm leading-5;
+  }
+}
